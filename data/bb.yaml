@@ -1,0 +1,55 @@
+#data: {"name":"lili", "pwd":"123456"}
+#data1:
+#  name: "lili"
+#  pwd: "1234"
+
+## {'data2': ['lili', 'nana']
+#data2:
+#  - "lili"
+#  - "nana"
+#
+## {'data3': ['123', '456']}
+#data3: ["123", "456"]
+#
+## {'data4': [{'name': 'lili'}, {'pwd': '123'}]}
+#data4:
+#  - name: "lili"
+#  - pwd: "123"
+
+#name: lili
+#
+#bool1: true
+#bool2: false
+#
+#bool3: True
+#bool4: False
+#
+#int1: 122
+#float1: 12.0889661
+
+# 返回值为None
+#data8: ~
+#data9: null
+#data10: Null
+#data11:
+
+# python的None不支持,会报错
+#data12：None
+#data13: none
+
+# 日期类型
+#date1: 2020-11-11 12:12:12
+#date2: 2020-11-11
+#date3: 12:12:12 # 返回值为一个数
+#
+#date4: 2020-06-01 02:02:02
+#date5: 2020-06-11 # 日期为个位数时，需要在前面补0，否则会返回整个字符串
+
+# 锚点
+info: &data
+  name: "lili"
+  phone: "12435678901"
+
+addr:
+  <<: *data
+  detail: "航渡路18号"
